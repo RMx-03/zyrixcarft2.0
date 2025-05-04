@@ -2,10 +2,11 @@ import { FaCode, FaPaintBrush, FaLaptopCode, FaRobot } from 'react-icons/fa';
 import '../App.css';
 import '../components/services/ServiceStyles.css';
 
-import ServiceContainer from '../components/services/ServiceContainer';
-import ServiceHeading from '../components/services/ServiceHeading';
-import ServiceTile from '../components/services/ServiceTile';
-import TypewriterText from '../components/services/TypewriterText';
+import {
+  ServiceContainer,
+  ServiceHeading,
+  ServiceTile
+} from '../components';
 
 // Service data
 const serviceData = [
@@ -68,9 +69,6 @@ const Service = () => {
             />
           ))}
         </div>
-
-        {/* Typewriter text */}
-        <TypewriterText text="Design, develop, deliver — we do it all beautifully." />
       </ServiceContainer>      
     </>
   );

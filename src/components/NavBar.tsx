@@ -10,6 +10,9 @@ function NavBar() {
             <a href="#services" className="pseudo-text-effect" data-after="Services">
                 <span>Services</span>
             </a>
+            <a href="#blogs" className="pseudo-text-effect" data-after="Blogs">
+                <span>Blogs</span>
+            </a>
             <a href="#portfolio" className="pseudo-text-effect" data-after="Portfolio">
                 <span>Portfolio</span>
             </a>

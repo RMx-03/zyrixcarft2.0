@@ -627,19 +627,19 @@
   }
   
   /* Typewriter text */
-  .typewriter-container {
-    margin: 50px 0 !important;
-    padding: 0 10px;
+  .service-container .typewriter-container {
+    margin: 50px 0;
+    padding: 0 15px;
   }
   
-  .typewriter-text {
+  .service-container .typewriter-text {
     font-size: 1.5rem;
     padding: 0;
     line-height: 1.4;
     max-width: 100%;
   }
   
-  .typewriter-text::after {
+  .service-container .typewriter-text::after {
     width: 40px;
     height: 3px;
     bottom: -8px;
@@ -674,16 +674,16 @@
   }
   
   /* Typewriter text */
-  .typewriter-container {
-    margin: 60px 0 !important;
+  .service-container .typewriter-container {
+    margin: 60px 0;
   }
   
-  .typewriter-text {
+  .service-container .typewriter-text {
     font-size: 1.8rem;
     max-width: 600px;
   }
   
-  .typewriter-text::after {
+  .service-container .typewriter-text::after {
     width: 50px;
     bottom: -10px;
   }

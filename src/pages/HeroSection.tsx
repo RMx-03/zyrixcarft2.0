@@ -1,10 +1,12 @@
-import HeroSectionLeftText from "../components/HeroSectionLeftText";
-import HeroSectionStripOne from "../components/HeroSectionStripOne";
-import HeroSectionStripTwo from "../components/HeroSectionStripTwo";
-import HeroSectionTopLeftText from "../components/HeroSectionTopLeftText";
-import NavBar from "../components/NavBar";
-import Button from "../components/Button";
-import Service from "../pages/Service";
+import {
+  HeroSectionLeftText,
+  HeroSectionStripOne,
+  HeroSectionStripTwo,
+  HeroSectionTopLeftText,
+  NavBar,
+  Button
+} from "../components";
+
 const HeroSection = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 md:px-8 relative ">
@@ -28,7 +30,6 @@ const HeroSection = () => {
       <HeroSectionLeftText/>
       <HeroSectionStripOne />
       <HeroSectionStripTwo />
-      {/* <Service /> */}
     </div>
   );
 };

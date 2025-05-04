@@ -1,6 +1,6 @@
 import HeroSection from './pages/HeroSection'
 import Service from './pages/Service'
-// import CircularNavApp from './pages/CircularNavApp'
+import Blogs from './pages/Blogs'
 
 
  
@@ -13,6 +13,8 @@ function App() {
       {/* #services section */}
       <Service />
       
+      {/* #blogs section */}
+      <Blogs />
       
     </div>
   )
