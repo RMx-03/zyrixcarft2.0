@@ -26,3 +26,8 @@
       border-color: transparent;
     }
   }
+
+/* Add smooth scrolling to entire site */
+html {
+  scroll-behavior: smooth;
+}

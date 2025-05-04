@@ -1,106 +1,79 @@
+import { FaCode, FaPaintBrush, FaLaptopCode, FaRobot } from 'react-icons/fa';
+import '../App.css';
+import '../components/services/ServiceStyles.css';
 
+import ServiceContainer from '../components/services/ServiceContainer';
+import ServiceHeading from '../components/services/ServiceHeading';
+import ServiceTile from '../components/services/ServiceTile';
+import TypewriterText from '../components/services/TypewriterText';
 
-import '../App.css'
-
-const cardData = [
-
-    {
-
-        title: "Web Projects.",
-        description: "We craft responsive, high-performance websites that align with your brand and deliver seamless user experiences across all devices.",
-
-    },
-
-    {
-
-        title: "Graphic Design.",
-
-        description:
-
-            "From logos to full branding kits, we create visually compelling designs that communicate your message and capture your audience’s attention.",
-
-    },
-
-    {
-
-        title: "UX/UI Design.",
-
-        description:
-
-            "Our user-centric approach ensures intuitive, engaging interfaces that enhance usability and turn users into loyal customers.",
-
-    },
-
+// Service data
+const serviceData = [
+  {
+    title: "Web Projects",
+    description: "We craft responsive, high-performance websites that align with your brand and deliver seamless user experiences across all devices. Our development approach ensures optimal performance and security.",
+    icon: <FaCode />,
+    link: "/web-services",
+    imageUrl: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80",
+    imageAlt: "Web Development",
+  },
+  {
+    title: "Graphic Design",
+    description: "From logos to full branding kits, we create visually compelling designs that communicate your message and capture your audience's attention. Our design philosophy blends creativity with strategic messaging.",
+    icon: <FaPaintBrush />,
+    link: "/graphic-design",
+    imageUrl: "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80",
+    imageAlt: "Graphic Design",
+  },
+  {
+    title: "UX/UI Design",
+    description: "Our user-centric approach ensures intuitive, engaging interfaces that enhance usability and turn users into loyal customers. We focus on creating experiences that feel natural and delightful.",
+    icon: <FaLaptopCode />,
+    link: "/ux-ui-design",
+    imageUrl: "https://images.unsplash.com/photo-1616400619175-5beda3a17896?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80",
+    imageAlt: "UX/UI Design",
+  },
+  {
+    title: "Automated Solutions",
+    description: "We develop custom automation solutions that streamline your business processes, reduce manual workload, and increase efficiency. Our solutions are tailored to your specific needs and integrate seamlessly with your existing systems.",
+    icon: <FaRobot />,
+    link: "/automation",
+    imageUrl: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80",
+    imageAlt: "Automated Solutions",
+  }
 ];
 
 
-
+// Service page  
 const Service = () => {
-
-    return (
-
-        <div className="min-h-screen w-full bg-black text-white px-40 py-46">
-
-            {/* SERVICE Heading */}
-
-            <div className="flex items-center mb-16">
-
-                <h1 className="text-5xl font-bold mr-6">SERVICE</h1>
-
-                <hr className="flex-grow border-t border-white" />
-
-            </div>
-
-
-
-            {/* Cards Section */}
-
-            <div className="flex justify-between space-x-12 p-5 relative left-20">
-
-                {cardData.map((card, index) => (
-
-                    <div key={index} className="w-1/3">
-
-                        <h2 className="text-2xl font-semibold mb-4">{card.title}</h2>
-
-                        <p className="text-sm leading-relaxed mb-6 text-gray-300">
-
-                            {card.description}
-
-                        </p>
-
-                        <button className="text-white font-medium hover:text-orange-500 transition duration-300">
-
-                            Know More
-
-                        </button>
-
-                    </div>
-
-                ))}
-
-            </div>
-
-
-
-            {/* Typewriter Text */}
-
-            <div className="w-full mt-30">
-
-                <h3 className="typewriter-text">
-
-                    Design, develop, deliver — we do it all beautifully.
-
-                </h3>
-
-            </div>
-
+  return (
+    <>
+      <ServiceContainer>
+        {/* Heading */}
+        <div className="mb-20">
+          <ServiceHeading title="OUR SERVICES" />
+        </div>
+        
+        {/* Services grid */}
+        <div className="service-grid mb-20">
+          {serviceData.map((service, index) => (
+            <ServiceTile
+              key={index}
+              title={service.title}
+              description={service.description}
+              imageUrl={service.imageUrl}
+              imageAlt={service.imageAlt}
+              link={service.link}
+              index={index}
+            />
+          ))}
         </div>
 
-    );
-
+        {/* Typewriter text */}
+        <TypewriterText text="Design, develop, deliver — we do it all beautifully." />
+      </ServiceContainer>      
+    </>
+  );
 };
-
-
 
 export default Service;
