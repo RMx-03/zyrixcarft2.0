@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { FC } from 'react';
+import './BlogStyles.css';
 
-interface BlogCardProps {
+interface BlogItemProps {
   title: string;
   description: string;
   imageUrl: string;
@@ -10,17 +11,17 @@ interface BlogCardProps {
   index: number;
 }
 
-const BlogCard: FC<BlogCardProps> = ({ 
+const BlogItem: FC<BlogItemProps> = ({ 
   title, 
   description, 
   imageUrl, 
-  date, 
+  date,
   author,
   index 
 }) => {
   return (
     <motion.div 
-      className="blog-card"
+      className="blog-item"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ 
@@ -31,17 +32,22 @@ const BlogCard: FC<BlogCardProps> = ({
         delay: index * 0.1
       }}
     >
-      <img 
-        src={imageUrl} 
-        alt={title} 
-        className="blog-card-image"
-      />
-      <div className="blog-card-content">
-        <div className="blog-card-date">{date} • {author}</div>
-        <h3 className="blog-card-title">{title}</h3>
-        <p className="blog-card-description">{description}</p>
+      <div className="blog-item-image-container">
+        <img src={imageUrl} alt={title} className="blog-item-image" />
+      </div>
+      
+      <div className="blog-item-content">
+        <div className="blog-item-meta">
+          <span className="blog-item-date">{date}</span>
+          <span className="blog-item-author">by {author}</span>
+        </div>
+        
+        <h3 className="blog-item-title">{title}</h3>
+        
+        <p className="blog-item-description">{description}</p>
+        
         <a href="#" className="blog-read-more">
-          Read more
+          Read More
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 12H19M19 12L12 5M19 12L12 19" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
@@ -51,4 +57,4 @@ const BlogCard: FC<BlogCardProps> = ({
   );
 };
 
-export default BlogCard;
+export default BlogItem;

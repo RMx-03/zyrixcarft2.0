@@ -1,9 +1,7 @@
 import HeroSection from './pages/HeroSection'
 import Service from './pages/Service'
-import Blogs from './pages/Blogs'
+import Blog from './pages/Blog'
 
-
- 
 function App() {
   return (
     <div className='bg-[var(--color-background)] min-h-screen overflow-x-hidden'>
@@ -13,9 +11,8 @@ function App() {
       {/* #services section */}
       <Service />
       
-      {/* #blogs section */}
-      <Blogs />
-      
+      {/* #blog section */}
+      <Blog />
     </div>
   )
 }
