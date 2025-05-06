@@ -35,7 +35,7 @@ const serviceData = [
     imageAlt: "UX/UI Design",
   },
   {
-    title: "Automated Solutions",
+    title: "Smart Solutions",
     description: "We develop custom automation solutions that streamline your business processes, reduce manual workload, and increase efficiency. Our solutions are tailored to your specific needs and integrate seamlessly with your existing systems.",
     icon: <FaRobot />,
     link: "/automation",

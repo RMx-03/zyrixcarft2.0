@@ -252,11 +252,14 @@
 }
 
 .service-tile.expanded .service-tile-description {
-  opacity: 1;
-  transform: translateY(0);
   height: auto;
   visibility: visible;
   position: relative;
+}
+
+.service-tile-description.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .service-tile-description p {
@@ -264,6 +267,8 @@
   line-height: 1.6;
   margin-bottom: 1.5rem;
   color: #e0e0e0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Link and arrow styles */
@@ -589,6 +594,8 @@
     border-radius: 0 0 16px 16px;
     overflow-y: auto;
     padding: 1.5rem;
+    max-width: 100%;
+    word-break: break-word;
   }
 
   /* Description visibility */
@@ -605,9 +612,12 @@
     height: auto;
     visibility: visible;
     transition: opacity 0.3s ease 0.2s, transform 0.5s ease 0.2s, height 0.3s ease, visibility 0s;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
   
-  /* Link visibility */
   .service-tile.expanded .service-tile-description .service-tile-link {
     display: none;
   }
@@ -702,4 +712,15 @@
   .mobile-back-button {
     display: none;
   }
-} 
+
+  /* Fade in description text after expansion */
+  .service-tile.expanded .service-tile-description {
+    opacity: 0;
+    transition: opacity 0.3s ease 0.4s, transform 0.5s ease 0.4s;
+  }
+  
+  .service-tile.expanded .service-tile-description.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
