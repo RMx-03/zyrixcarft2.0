@@ -1,18 +1,4 @@
-.typewriter-text {
-    font-family: 'Courier New', monospace;
-    font-size: 1.25rem; 
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid #ff6b00;
-    width: 0;
-    animation: typing 5s steps(40, end) forwards, blink 0.75s step-end infinite;
-    color: white;
-  }
-  .typewriter-text:hover{
-    color: #ff6b00;
-  }
-  
-  @keyframes typing {
+@keyframes typing {
     from {
       width: 0;
     }
